@@ -1,0 +1,14 @@
+<div class="main-block" style=" background-image: url('todo.jpg')">
+
+  <form action="/">
+    <h1>Creating New Student Entry</h1>
+    <div class="info">
+      <input [(ngModel)]="students.id" class="stud" name="name"  placeholder="Enter Id" type="number"><br><br>
+      <input  [(ngModel)]="students.name" class="stud" name="name"   placeholder="Enter Name" type="text"><br><br>
+      <input  [(ngModel)]="students.dept" class="stud" name="name"   placeholder="Enter Department" type="text"><br><br>
+      <input  [(ngModel)]="students.mark" class="students" name="name"   placeholder="Enter Marks" type="number"><br><br>
+    </div>
+    <button mat-raised-button type="submit" href="/" (click)="createStudent()" >Submit</button>&nbsp;
+    <button mat-raised-button class="example-icon" routerLink=""> View Changes</button>
+  </form>
+</div>

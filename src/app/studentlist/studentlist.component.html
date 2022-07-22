@@ -1,0 +1,30 @@
+
+<div class="container">
+  <h2>Student List</h2>
+  <p>Use the buttons provided to perform crud operations</p>
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Student ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Department</th>
+      <th scope="col">Marks</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let s of studentlist">
+      <td> {{s.id}}</td>
+      <td> {{s.name}}</td>
+      <td> {{s.dept}}</td>
+      <td> {{s.mark}}</td>
+      <td>
+        <button type="button" class="btn btn-primary" routerLink="edit" (click)="UpdateStudent()">Edit</button> &nbsp;
+      <button type="button" class="btn btn-danger" (click)="deletestudentbyid(s.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-success" (click)="createStudent()" routerLink="add">Add New Student</button>
+</div>
+
